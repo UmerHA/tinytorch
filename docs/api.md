@@ -20,8 +20,6 @@ Everything lives in the `TinyTensor` class.
 
 Returns bytes per element.
 
----
-
 ## 2. `TinyTensor` interface
 
 | Method | Note |
@@ -46,8 +44,6 @@ Copy ctor and copy assignment are implemented.
 Move ctor/assignment intentionally `throw`; this prevents silent use‑after‑free
 bugs when experimenting.
 
----
-
 ## 3. Factory helpers
 
 ```cpp
@@ -57,8 +53,6 @@ TinyTensor constants(sizes, float value, dtype);
 ```
 
 All three allocate on device and fill via a pinned host buffer.
-
----
 
 ## 4. Dispatch macros
 
@@ -74,15 +68,11 @@ TINYTORCH_DISPATCH_BY_TYPE(t.dtype(), {
 });
 ```
 
----
-
 ## 5. Writing tests
 
 1. Use Catch2 (single header, already vendored in `tests/`).  
 2. Always launch a CUDA kernel under test, then copy to host and compare.  
 3. Keep GPU memory small; CI runners may not have large cards.
-
----
 
 ## 6. FAQ
 
