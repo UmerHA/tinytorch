@@ -2,18 +2,12 @@
 
 TinyTorch is a super lightweight tensor helper that lets you write and test CUDA
 kernels *without pulling the full PyTorch build chain*.  
-It covers the 90% use‑case for fast iteration:
 
+It covers the 90% use‑case for fast iteration:
 * **Device storage** – `cudaMalloc`/`cudaFree` handled for you.  
 * **Types** – `float32`, `bfloat16`, `int32`.  
 * **Copy helpers** – host↔device and tensor↔tensor.  
 * **Simple API** – `zeros`, `ones`, `constants`, `sizes()`, `numel()`, `print()`.
-
-> Not a re‑implementation of PyTorch. TinyTorch is a **tiny shim** to unblock
-> kernel work. If you need autograd, dispatch keys, or fancy ops, use the real
-> thing.
-
----
 
 ## Quick start
 
@@ -26,8 +20,6 @@ cd tinytorch
 nvcc -std=c++17 tinyutil.cpp tinytorch.cpp -o tinyutil
 ./tinyutil     # runs a small demo and prints shapes / data
 ```
-
----
 
 ## Writing a kernel
 
