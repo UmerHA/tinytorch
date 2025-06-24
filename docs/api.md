@@ -92,7 +92,3 @@ later.
 
 **Q: Does it work on Windows?**  
 A: Yes—`nvcc` + `MSVC` is fine. Paths in the sample assume POSIX; adjust.
-
----
-
-*Last updated: 2025‑06‑19*
